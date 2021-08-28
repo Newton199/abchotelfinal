@@ -1,0 +1,124 @@
+html,
+
+/*.container {
+    height: 210%;
+    align-content: right;
+    background-image: url("img/about/about-1.jpg");
+}
+
+.card {
+    height: 280px;
+    margin-top: 100px;
+    margin-bottom: auto;
+    width: 480px;
+    background-color: yellow !important;
+}
+
+.social_icon span {
+    font-size: 60px;
+    margin-left: 10px;
+    color: #FFC312;
+}
+
+.social_icon span:hover {
+    color: white;
+    cursor: pointer;
+}
+
+.card-header h3 {
+    color: white;
+}
+
+.social_icon {
+    position: absolute;
+    right: 20px;
+    top: -45px;
+}
+
+.input-group-prepend span {
+    width: 50px;
+    background-color: #FFC312;
+    color: black;
+    border: 0 !important;
+}
+
+input:focus {
+    outline: 0 0 0 0 !important;
+    box-shadow: 0 0 0 0 !important;
+}*/
+
+html {
+    height: 200%;
+}
+
+body {
+    background-color: rgb(75, 73, 73);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.container {
+    margin: auto;
+    width: 1024px;
+}
+
+header {
+    height: 118px;
+    text-align: center;
+}
+
+nav {
+    background-color: rgba(0, 0, 0, 0.308);
+    text-align: center;
+    padding: 14px;
+}
+
+nav a {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    text-decoration: none;
+    padding: 0 15px;
+    font-size: 13px;
+}
+
+nav a:hover {
+    background-color: rgba(0, 0, 0, 0.555);
+    cursor: pointer;
+    padding: 15px;
+    transition: ease-in-out;
+}
+
+main {
+    height: 1500px;
+    text-align: center;
+    padding-top: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+h1 {
+    font-size: 84px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+p {
+    font-size: 18px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+button {
+    padding: 10px 40px;
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 200px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+button:hover {
+    background: transparent;
+    cursor: pointer;
+    color: white;
+}
