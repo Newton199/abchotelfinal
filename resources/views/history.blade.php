@@ -5,7 +5,7 @@
   
             <h2>your history</h2>
   	@forelse($history as $room)
-
+{{$room->created_at}}
 <div id="rooms">
       <div class="container">
           <div class="section-header">

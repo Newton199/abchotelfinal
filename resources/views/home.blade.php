@@ -95,27 +95,31 @@
   </div>
 </div>
 
+     <h2>Sent special message</h2>
+     <br>
+     <br>
+     <center>
 <form action="/createmessage" method="post" role="form" class="php-email-form">
     @csrf
       <div class="col-md-6 form-group">
-        <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
-      </div>
+     Name:   <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+      </div><br>
       <div class="col-md-6 form-group mt-3 mt-md-0">
-        <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+    Email:    <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
       </div>
     </div>
     
-    <div class="form-group mt-3">
-      <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+    <div class="form-group mt-3"><br><br><br><br><br><br><br><br><br>
+ <center> Message:   <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
     </div>
-    
+
     <div class="text-center"><button type="submit">Send Message</button></div>
   </form>
-
+     </center></center>
 <div id="call-us">
   <div class="container">
       <div class="section-header">
-          <h2>Click Below to Call Us</h2>
+          <h3>Click Below to Call Us</h3>
           <p>
               please feel free to contract us
           </p>

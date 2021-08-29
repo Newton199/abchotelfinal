@@ -12,9 +12,13 @@
 
   <style>
     /* Remove the navbar's default margin-bottom and rounded borders */ 
+    body {
+  font-size: 170%;
+}
+   
     .navbar {
-      margin-bottom: 0;
-      border-radius: 0;
+      margin-bottom: 1px;
+      border-radius: 1px;
     }
     
     /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
@@ -64,48 +68,55 @@ th, td {
   background-color: black;
   color: white;
 }
-
+.h1{
+  text-align: center
+}
+.h2{
+  text-decoration-color: antiquewhite;
+}
   </style>
 </head>
 <body>
 
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
-      </button>
-      
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="/home">Home</a></li>
-        <li><a href="/showmessage">messages</a></li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
-      </ul>
-    </div>
-  </div>
+  <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+    <div class="container">
+
+<div class="collapse navbar-collapse" id="myNavbar">
+    
+  <ul class="nav navbar-nav">
+    <li class="active"><a href="/home">Home</a></li>
+    <li><a href="/showmessage">messages</a></li>
+  </ul>
+  <ul class="nav navbar-nav navbar-centre">
+    <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
+  </ul>
+    
+</div>
+</div>
 </nav>
- <center><h2> Room Create </h2></center>
+
+
+ <center><h2> Room Create </h2>
  <form method="post" action="/createroom" enctype="multipart/form-data">
   @csrf
   <!-- @csrf ko kam chai  yo form ko authenticated token laravel lai dine taki unverified user le yo form submit garna napaoos --> 
 Roomname:
-<input type="text" name="roomname">
+<input type="text" name="roomname"><br>
 Capacity
-<input type="number" name="capacity">
-<input type="number" name="price">
+<input type="number" name="capacity"><br>
+Price
+<input type="number" name="price"> 
+<br>
+Image of room
 <input type="file" name="image">
-<button type="submit">submit</button>
-</form>
+
+  <button type="submit">submit</button>
+</form></center>
+<br> 
+ <br>
 
 
-
-<h2> Guest Information</h2>
+ <center><h2> Guest Information</h2></center>
 
 
 <table id="t01">

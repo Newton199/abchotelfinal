@@ -1,5 +1,19 @@
 @extends('layouts.app')
 @section('content')
+
+<style>
+    table {
+  border-collapse: collapse;
+  
+}
+th, td {
+  padding: 10px;
+  text-align: center;
+}
+
+
+tr:hover {background-color: #D6EEEE;}
+    </style>
 <body>
 
 
@@ -60,27 +74,45 @@
 
 
                             @endforeach 
-                            <div class="control-group col-md-3">  </div>
+<br> <br><div class="control-group col-md-3">  </div>
                           <div class="button"><button type="submit" id="bookingButton">Book Now</button></div>
                   </div>
               </div>
           </div>
       </div>
   </form>
-already booked dates <br>
+
+  <br> <br> 
+<h3>Already booked dates</h3><br>
 @foreach($books as $book)
 {{$book->arrive}}
 {{$book->depart}}
 <br>
 @endforeach
 <br>
- @foreach($rooms as $room)
-{{$room->roomname}}
-<!-- <img src="/storage/{{$room->image}}"> -->
-<br>
-{{$room->price}}
-<br>
-{{$room->capacity}}
+@foreach($rooms as $room)
+
+<Center>
+<table>
+    <tr>
+      
+      <th>Room  Name</th>
+      <th>Capacity</th> 
+      <th>Prize</th>
+  
+    </tr>
+  <tr>
+  
+      <td>{{$room->roomname}}</td>
+      
+      <td>{{$room->capacity}}</td>
+      <td>{{$room->price}}</td>
+    </tr>
+   
+  </table>
+ 
+</Center>
+
 
 
 @endforeach

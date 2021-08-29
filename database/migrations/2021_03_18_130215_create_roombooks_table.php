@@ -16,7 +16,7 @@ class CreateRoombooksTable extends Migration
         Schema::create('roombooks', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('user_id');
-            $table->integer('phone');
+            $table->Biginteger('phone');
             $table->date('arrive');
             $table->date('depart');
             $table->string('room');
