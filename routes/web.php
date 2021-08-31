@@ -26,11 +26,15 @@ else{
 });
 Route::get('/seerooms',[App\Http\Controllers\HomeController::class,'seerooms']);
 
-Auth::routes();
+
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/roombook/{room_id}', [App\Http\Controllers\RoombookController::class, 'create'])->name('roombook');
 
 Route::post('/roombook/store', [App\Http\Controllers\RoombookController::class, 'store']);
+Route::post('/updateroom', [App\Http\Controllers\AdminController::class, 'updateroom']);
+Route::get('/edit/{room_id}', [App\Http\Controllers\AdminController::class, 'edit']);
+Route::get('/delete/{room_id}', [App\Http\Controllers\AdminController::class, 'delete']);
+
 
 Route::get('/admin', [App\Http\Controllers\AdminController::class, 'dashboard']);
 Route::post('/createroom', [App\Http\Controllers\AdminController::class, 'createroom']);

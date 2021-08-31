@@ -163,3 +163,35 @@ Image of room
     <td></td>
   </tr>
 </table>
+
+
+
+
+
+
+
+
+rooms:
+<table>
+<tr>
+  <th>id</th>
+  <th>room name</th>
+  <th>price</th>
+  <th>capacity</th>
+  <th>edit</th>
+  <th>delete</th>
+</tr>
+
+@foreach ($rooms as $room)
+<tr>
+  
+  <td>{{$room->id}}</td>
+  <td>{{$room->roomname}}</td>
+  <td>{{$room->price}}</td>
+  <td>{{$room->capacity}}</td>
+  <td><a href="/edit/{{$room->id}}">edit</a></td>
+  <td><a href="/delete/{{$room->id}}">delete</a></td>
+</tr>
+  @endforeach
+
+</table>

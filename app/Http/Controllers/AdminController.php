@@ -23,12 +23,12 @@ if(auth()->user()->is_admin==1){
 $details = DB::table('roombooks')
             ->leftJoin('users', 'users.id', '=', 'roombooks.user_id')
             ->get();
+$rooms = Room::get();
 
 
 
 
-
-return view('admin',compact('details'));
+return view('admin',compact('details','rooms'));
     }
     else{
     	return redirect('home');
@@ -62,6 +62,47 @@ $data = request()->validate([
 return redirect('/admin');
 
 } 
+
+public function edit($room_id){
+    $room = Room::where('id',$room_id)->get();
+    return view('edit',compact('room_id','room'));
+
+}
+public function updateroom(Request $request){
+	
+$data = request()->validate([
+            'roomname' => 'required',
+            'capacity' => 'required',
+            'price' => 'required',
+
+            'image'=>'required|image',
+        ]);
+        $imagePath = request('image')->store('uploads','public');
+
+        $image = Image::make(public_path("storage/{$imagePath}"))->fit(1200, 1200);
+        $image->save();
+        
+
+        $room_id = $request->room_id;
+        
+	Room::where('id',$room_id)->update([
+		'roomname'=>$request->roomname,
+		'capacity'=>$request->capacity,
+		'price'=>$request->price,
+		 'image'=>$imagePath,
+
+        ])
+      ;
+        return redirect('/admin');
+        
+        
+}
+public function delete($room_id){
+    $room = room::where('id',$room_id);
+    $room->forceDelete();
+    return redirect('/admin');
+
+}
 }
 
 
