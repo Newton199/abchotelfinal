@@ -26,7 +26,7 @@ else{
 });
 Route::get('/seerooms',[App\Http\Controllers\HomeController::class,'seerooms']);
 
-
+Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/roombook/{room_id}', [App\Http\Controllers\RoombookController::class, 'create'])->name('roombook');
 
