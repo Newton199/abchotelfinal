@@ -30,7 +30,7 @@ $botman->hears('ke xa',function($bot){
                     $bot->reply(' for private Rs4000');
                     });
 
-                    $botman->hears('  book my room',function($bot){
+                    $botman->hears('book my room',function($bot){
                         $bot->reply(' please transfer payement on this account XXXXXX and remarked as private room');
                         });
 
