@@ -2,8 +2,8 @@
 $botman = app('botman');
 
 
-$botman->hears('foo',function($bot){
-$bot->reply('bar');
+$botman->hears('foot',function($bot){
+$bot->reply('ball');
 });
 
 $botman->hears('hi',function($bot){
@@ -19,7 +19,7 @@ $botman->hears('ke xa',function($bot){
         });
 
         $botman->hears('tell us category',function($bot){
-            $bot->reply('we have standard delux and private ');
+            $bot->reply('we have standard, delux and private ');
             });
 
             $botman->hears('I want private',function($bot){

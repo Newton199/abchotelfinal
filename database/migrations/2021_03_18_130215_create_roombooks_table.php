@@ -19,7 +19,7 @@ class CreateRoombooksTable extends Migration
             $table->Biginteger('phone');
             $table->date('arrive');
             $table->date('depart');
-            $table->string('room');
+            $table->integer('room');
             $table->timestamps();
         });
     }

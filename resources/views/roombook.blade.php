@@ -28,6 +28,9 @@ tr:hover {background-color: #D6EEEE;}
               <p>
                   please book your room
               </p>
+              <br>
+              <h3> Note</h3>
+              <p> Also after room booking please transfer money in this account XXXXXXX within 25 min others wise room will deleted</p>
           </div>
           <div class="row">
               <div class="col-12">
@@ -37,7 +40,9 @@ tr:hover {background-color: #D6EEEE;}
                               <div class="control-group col-md-6">
                                   <label>Mobile</label>
                                   <input type="number" name="phone" class="form-control" id="mobile" placeholder="E.g. +1 234 567 8900" required="required" data-validation-required-message="Please enter your mobile number" />
-                                  
+                                 
+                        
+                                
                                 @error('phone')
                                 
                                         <strong>{{ $message }}</strong>
@@ -47,12 +52,10 @@ tr:hover {background-color: #D6EEEE;}
                           </div>
                           <div class="form-row">
                               <div class="control-group col-md-6">
-
 <label>Check-In</label>
-<input type="datetime-local" class="form-control datetimepicker-input" id="f1-date-1" data-toggle="datetimepicker" data-target="#date-1" required="required" data-validation-required-message="Please enter date" />
-<p class="help-block text-danger"></p>
-
-                                
+                                   
+                                  <input type="text" name="arrive" class="form-control datetimepicker-input" id="date-1" data-toggle="datetimepicker" data-target="#date-1" required="required" data-validation-required-message="Please enter date" />
+                                  <p class="help-block text-danger"></p>
                                     @error('arrive')
                                 
                                         <strong>{{ $message }}</strong>
@@ -61,10 +64,9 @@ tr:hover {background-color: #D6EEEE;}
                                   
                               </div>
                               <div class="control-group col-md-6">
+                                  <label>Check-Out</label>
+                                  <input type="text" name="depart" class="form-control datetimepicker-input" id="date-2" data-toggle="datetimepicker" data-target="#date-2" required="required"   data-validation-required-message="Please enter date" />
                                 
-<label>Check-Out</label>
-                                  <input type="datetime-local" class="form-control datetimepicker-input" id="f1-date-2" data-toggle="datetimepicker" data-target="#date-2" required="required" data-validation-required-message="Please enter date" />
-                        <p class="help-block text-danger"></p>
                                     @error('depart')
                                 
                                         <strong>{{ $message }}</strong>
